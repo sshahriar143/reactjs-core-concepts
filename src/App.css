@@ -42,4 +42,14 @@
   background-color: rgb(41, 220, 160);
   padding: 20px;
   border-radius: 15px;
+  margin: 10px;
+  border: 3px solid peru;
+}
+.person{
+  background-color: teal;
+  border: 3px solid rgb(20, 37, 195);
+  margin: 10px;
+  padding: 20px;
+  color: rgb(240, 235, 234);
+  border-radius: 20px;
 }

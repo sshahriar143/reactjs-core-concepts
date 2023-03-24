@@ -1,50 +1,38 @@
 import logo from './logo.svg';
 import './App.css';
 
-const number =1234565;
-const singer = {Name:'Famous Dr. Mahfuz', Job:"We all know"}
-const actor = {Name:'Hero Alam', Job:'Comedian'}
 
-const singerStyle ={
-  color:'purple',
-  backgroundColor: 'white' ,
-  borderRadius:10
-}
-//   
-const sumStyle ={
-  color:'red' ,
-  backgroundColor:'green' ,
-  borderRadius:10
-}
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1>JSX</h1>
-        <div className="container">
-          <h3>Hello Dude,React!How Are You?</h3>
-        </div>
-        <div className="music">
-          <p style={sumStyle}>Sum:{45651+number}</p>
-          <p style={singerStyle}>Name: {singer.Job} {singer.Name}</p>
-          <p style={{color:'blue', backgroundColor:'yellow' , borderRadius:10}}>Name:{actor.Job} {actor.Name}</p>
-        </div>
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Person name='Ananta Jalil' Heroine='Borsha'></Person>
+      <Person name='Rubel' Heroine='Moushomi'></Person>
+      <Person name='Bapparaz' Heroine='Sabnur'></Person>
+      <Person name='Riaz' Heroine='Purnimaaa'></Person>
+      <p>Bio Of Mr.Ajay......</p>
+      <Friend phone='01774402393' name='Shahriar'></Friend>
+      <Friend phone='01942646143' name='Shimul'></Friend>
     </div>
   );
 }
+function Person(props){
+  console.log(props);
+  return (
+    <div className='person'>
+       <h1>{props.name}</h1>
+       <p>Heroine:{props.Heroine}</p>
+    </div>
+  )
+  } 
+
+  function Friend(props){
+    return (
+      <div className='container'>
+        <h1>{props.name}</h1>
+        <p>Phone:{props.phone}</p>
+      </div>
+    )
+  }
 
 export default App;
